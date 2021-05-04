@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuListFragSearch"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:iconTint="@color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        />
+
+    <group android:checkableBehavior="single" >
+        <item android:title="@string/sort_by">
+            <menu >
+                <item
+                    android:id="@+id/menuListFragHighPriority"
+                    android:title="@string/high_priority"/>
+                <item
+                    android:id="@+id/menuListFragLowPriority"
+                    android:title="@string/low_priority"/>
+
+            </menu>
+        </item>
+    </group>
+
+
+
+    <group android:checkableBehavior="single" >
+        <item android:title="View By">
+            <menu >
+
+                <item
+                    android:id="@+id/menuListFragDefault"
+                    android:title="@string/delault"/>
+
+                <item
+                    android:id="@+id/menuListFragGrid"
+                    android:title="@string/Grid"/>
+                <item
+                    android:id="@+id/menuListFragList"
+                    android:title="@string/list"/>
+            </menu>
+        </item>
+    </group>
+
+
+
+
+
+    <item
+        android:id="@+id/menuListFragDeleteAll"
+        android:title="@string/delete_all"
+        app:showAsAction="never"
+        />
+</menu>

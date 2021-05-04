@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AddFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <EditText
+                android:id="@+id/editTextFragmentAddTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_bg"
+
+
+                android:paddingLeft="16dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="16dp"
+                android:textAlignment="gravity"
+                android:gravity="start"
+
+                android:hint="@string/title" />
+
+            <Spinner
+                android:id="@+id/spinnerFragmentAdd"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:entries="@array/priorities" />
+
+            <EditText
+                android:id="@+id/editTextFragmentAddDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:background="@drawable/edit_text_bg"
+
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:maxLines="300"
+                android:minLines="10"
+
+                android:paddingLeft="16dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="24dp"
+                android:textAlignment="gravity"
+                android:gravity="start"/>
+
+            <Button
+                android:id="@+id/buttonAddFragmentSave"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:text="@string/save"
+                android:background="@drawable/button_bg"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_marginTop="36dp"
+                android:layout_marginBottom="16dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
