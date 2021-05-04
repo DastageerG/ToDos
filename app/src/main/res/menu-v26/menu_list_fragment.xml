@@ -27,23 +27,7 @@
 
 
 
-    <group android:checkableBehavior="single" >
-        <item android:title="View By">
-            <menu >
 
-                <item
-                    android:id="@+id/menuListFragDefault"
-                    android:title="@string/delault"/>
-
-                <item
-                    android:id="@+id/menuListFragGrid"
-                    android:title="@string/Grid"/>
-                <item
-                    android:id="@+id/menuListFragList"
-                    android:title="@string/list"/>
-            </menu>
-        </item>
-    </group>
 
 
 

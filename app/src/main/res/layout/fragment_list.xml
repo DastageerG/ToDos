@@ -23,6 +23,7 @@
         android:backgroundTint="@color/blue"
         app:tint="@color/white"
         android:src="@drawable/ic_baseline_add_24"
+        android:focusable="true"
         />
 
     <ImageView

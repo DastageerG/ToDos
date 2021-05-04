@@ -23,6 +23,28 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application)
         return repository.getAllToDos()
     }
 
+
+    fun getToDosWithHighPrior() :LiveData<List<ToDoData>>?
+    {
+        return repository.getToDosWithHighPrior()
+    }
+
+
+    fun getToDosWithLowPrior() :LiveData<List<ToDoData>>?
+    {
+        return repository.getToDosWithLowPrior()
+    }
+
+
+    fun getToDosWithSearchQuery(query:String) :LiveData<List<ToDoData>>?
+    {
+        return repository.getToDosWithSearchQuery(query)
+    }
+
+
+
+
+
     fun getToDosCount() : LiveData<Int>?
     {
         return repository.countToDos()

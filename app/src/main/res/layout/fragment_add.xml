@@ -60,6 +60,7 @@
                 android:paddingLeft="16dp"
                 android:paddingTop="24dp"
                 android:paddingEnd="24dp"
+                android:paddingBottom="24dp"
                 android:textAlignment="gravity"
                 android:gravity="start"/>
 

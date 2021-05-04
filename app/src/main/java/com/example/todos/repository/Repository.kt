@@ -29,10 +29,33 @@ class Repository(private var dao:ToDoDao?)
     }
 
 
-     fun getAllToDos() :LiveData<List<ToDoData>>?
+
+
+    fun getAllToDos() :LiveData<List<ToDoData>>?
     {
         return dao?.getAllToDos()
     }
+
+
+    fun getToDosWithHighPrior() :LiveData<List<ToDoData>>?
+    {
+        return dao?.getToDosWithHighPrior()
+    }
+
+
+    fun getToDosWithLowPrior() :LiveData<List<ToDoData>>?
+    {
+        return dao?.getToDosWithLowPrior()
+    }
+
+
+    fun getToDosWithSearchQuery(query:String) :LiveData<List<ToDoData>>?
+    {
+        return dao?.getToDosWithSearchQuery(query)
+    }
+
+
+
 
     fun countToDos() :LiveData<Int>?
     {
