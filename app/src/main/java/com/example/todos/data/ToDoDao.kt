@@ -19,7 +19,13 @@ interface ToDoDao
     suspend fun deleteToDo(toDoData: ToDoData)
 
 
+    @Query("delete from todotable ")
+    suspend fun deleteAllToDos()
+
     @Query("Select * from todotable order by id desc ")
     fun getAllToDos() : LiveData<List<ToDoData>>
+
+    @Query("Select Count(*) from todotable ")
+    fun countToDos() : LiveData<Int>
 
 }

@@ -23,9 +23,20 @@ class Repository(private var dao:ToDoDao?)
         dao?.deleteToDo(toDoData)
     }
 
+    suspend fun deleteAllToDos()
+    {
+        dao?.deleteAllToDos()
+    }
+
+
      fun getAllToDos() :LiveData<List<ToDoData>>?
     {
         return dao?.getAllToDos()
+    }
+
+    fun countToDos() :LiveData<Int>?
+    {
+        return dao?.countToDos()
     }
 
 

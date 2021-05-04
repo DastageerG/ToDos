@@ -8,6 +8,7 @@ import com.example.todos.data.DatabaseHelper
 import com.example.todos.data.ToDoDao
 import com.example.todos.model.ToDoData
 import com.example.todos.repository.Repository
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class ToDoViewModel(application: Application) : AndroidViewModel(application)
@@ -22,9 +23,14 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application)
         return repository.getAllToDos()
     }
 
+    fun getToDosCount() : LiveData<Int>?
+    {
+        return repository.countToDos()
+    }
+
     fun insertToDo(toDoData: ToDoData)
     {
-        viewModelScope.launch()
+        viewModelScope.launch(Dispatchers.IO)
         {
             repository.insertToDo(toDoData)
         }
@@ -33,9 +39,17 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application)
 
     fun deleteToDo(toDoData: ToDoData)
     {
-        viewModelScope.launch()
+        viewModelScope.launch(Dispatchers.IO)
         {
             repository.deleteToDo(toDoData)
+        }
+    } // insertToDo closed
+
+    fun deleteAllToDos()
+    {
+        viewModelScope.launch(Dispatchers.IO)
+        {
+            repository.deleteAllToDos()
         }
     } // insertToDo closed
 
@@ -43,7 +57,7 @@ class ToDoViewModel(application: Application) : AndroidViewModel(application)
 
     fun updateToDo(toDoData: ToDoData)
     {
-        viewModelScope.launch()
+        viewModelScope.launch(Dispatchers.IO)
         {
             repository.updateToDo(toDoData)
         }
