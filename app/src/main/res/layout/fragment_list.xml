@@ -20,7 +20,7 @@
         android:layout_alignParentRight="true"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="24dp"
-        android:backgroundTint="@color/blue"
+        android:background="@drawable/button_bg"
         app:tint="@color/white"
         android:src="@drawable/ic_baseline_add_24"
         android:focusable="true"

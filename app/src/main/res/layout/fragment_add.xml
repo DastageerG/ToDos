@@ -14,8 +14,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            >
 
+            >
             <EditText
                 android:id="@+id/editTextFragmentAddTitle"
                 android:layout_width="match_parent"
@@ -64,7 +64,7 @@
                 android:textAlignment="gravity"
                 android:gravity="start"/>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/buttonAddFragmentSave"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
@@ -74,7 +74,7 @@
                 android:textAllCaps="false"
                 android:layout_gravity="center"
                 android:layout_marginTop="36dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginBottom="32dp"
                 />
 
         </LinearLayout>
