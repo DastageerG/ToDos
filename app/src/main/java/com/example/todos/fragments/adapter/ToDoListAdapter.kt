@@ -32,17 +32,18 @@ class ToDoListAdapter : androidx.recyclerview.widget.ListAdapter<ToDoData,ToDoLi
         )
 {
 
-    inner class ViewHolder(itemView: View)  : RecyclerView.ViewHolder(itemView)
+    inner class ViewHolder(itemView: LayoutTodoItemsBinding)  : RecyclerView.ViewHolder(itemView.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder
     {
-        val view  = LayoutInflater.from(parent.context).inflate(R.layout.layout_todo_items,parent,false)
-
+        val view  = LayoutTodoItemsBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int)
     {
+
+
         LayoutTodoItemsBinding.bind(holder.itemView).apply()
         {
             val todo = getItem(position)
@@ -56,11 +57,13 @@ class ToDoListAdapter : androidx.recyclerview.widget.ListAdapter<ToDoData,ToDoLi
                 Priority.Medium-> layoutToDoItemsPriorityIndicator.setCardBackgroundColor(Color.YELLOW)
                 Priority.Low -> layoutToDoItemsPriorityIndicator.setCardBackgroundColor(Color.GREEN)
 
-
             } // when closed
 
 
+
         } // binding closed
+
+
 
         holder.itemView.setOnClickListener(View.OnClickListener
         {
